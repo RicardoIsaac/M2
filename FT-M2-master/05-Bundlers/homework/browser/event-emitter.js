@@ -1,9 +1,9 @@
-(function () {
+//(function () {
 
-  window.EventEmitter = EventEmitter;
+  //window.EventEmitter = EventEmitter;
 
   // our EventEmitter constructor function
-  function EventEmitter () {
+  export function EventEmitter () { //////////////////////////////// VERSION ES6
     this.subscribers = {};
   }
 
@@ -42,5 +42,7 @@
     });
 
   };
-
-})();
+////////////////////  VERSION NORMAL
+  // module.exports = EventEmitter;
+///////////////// VERSION NORMAL
+//})();
