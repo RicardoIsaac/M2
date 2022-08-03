@@ -1,0 +1,73 @@
+
+.contenedor{
+ border: none;
+  border-radius: 30px;
+  background-image: url("https://devbeep.com/wp-content/uploads/2022/03/ccccccc.png");
+  box-shadow: 0 15px 30px 1px grey;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 200px;
+  position: relative;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-weight: 900;
+}
+
+.info{
+padding-top: 20px;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
+
+
+}
+.info h5{
+   font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 25px;
+  color: blue;
+  position: absolute;
+  left: 20px;
+  
+}
+.info h6{
+   font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 25px;
+  color: red;
+  position: absolute;
+
+  left: 20px;
+  top:120px
+}
+  
+.info img{
+
+  position: absolute;
+  right: 15px;
+  top: 20px;
+  height: 180px;
+  width: 180px;
+  }
+  .info2 img{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+right: 13px;
+top: 10px;
+    }
+
+  .btn {
+    border:none;
+height: 50px;
+width: 50px;
+position: absolute;
+right: 13px;
+top: 10px;
+background-color: rgba(216, 228, 47, 0);
+color: rgba(255, 0, 0, 0);
+border-radius: 100%;
+
+}
+.btn :hover{
+  background-color: rgb(246, 248, 241);
+  cursor: pointer;
+}

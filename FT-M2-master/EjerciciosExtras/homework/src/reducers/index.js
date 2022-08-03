@@ -7,9 +7,36 @@ const initialState = {
   commentsPost: [],
 };
 
-export default function rootReducer(state = initialState, action) {
+function rootReducer(state = initialState, action) {
   switch (action.type) {
-    default:
-      return state;
+
+   case GET_ALL_USERS:
+     return {
+       ...state,
+       users: action.payload,
+     };
+
+     case GET_ALL_POSTS:
+     return {
+       ...state,
+       posts: action.payload,
+     };
+
+     case GET_ALL_USERS_POST:
+      return {
+        ...state,
+        posts: action.payload,
+      };
+ 
+      case  GET_ALL_COMMENTS_POST:
+      return {
+        ...state,
+        comments: action.payload,
+      };
+
+     default:
+     return state;
   }
 }
+
+export default rootReducer;

@@ -1,0 +1,30 @@
+.contenedor{
+background-color: rgb(211, 211, 211);
+padding-top: 10px;
+padding-bottom: 12 px;
+
+
+
+}
+.contenedor button{
+    border:none;    background-color: rgb(56, 56, 56);
+
+    color: rgb(255, 255, 255);
+    padding: 4px 8px;
+    font-size: 16px;
+    cursor: pointer;
+  
+    position: relative;
+    
+}
+.contenedor input{
+    border:none;
+    color: black;
+    padding: 4px 8px;
+    font-size: 16px;
+    cursor: pointer;
+  
+    position: relative;
+    
+    
+}

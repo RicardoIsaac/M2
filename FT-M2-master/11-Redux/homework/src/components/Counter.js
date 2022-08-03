@@ -1,37 +1,25 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import { increment, decrement } from '../actions';
+import { increment, decrement, par, delay ,double,ndouble,x} from '../actions';
 
 class Counter extends Component {
-    // Extra Credit
-    incrementIfOdd = () => {
-      //Implementar una función de incremento que sólo aumenta si el valor del contador es impar
-    };
-    // Extra Credit
-    incrementAsync = () => {
-        //  Implementar una función de incremento que aumenta después de esperar un segundo
-    };
 
     render() {
-        // Completa las funciones onClick de los botones
+        // Completa las funciones onClick de los botones   
         // Al hacer clic en estos botones, el recuento debe disminuir o aumentar en consecuencia
         return (
-            <p>
+            <div>
                 Clickeado: {this.props.count} veces
-                <button onClick={() => {/* Completar */ }}>
-                    + {/* Incremeta */}
-                </button>
-                <button onClick={() => {/* Completar */ }}>
-                    -  {/* Decrementa */}
-                </button>
-                 {/* Si quieres hacer los extra credit puede descomentar las lineas de abajo */}
-                {/* <button onClick={this.incrementIfOdd}>
-                    incrementa si es impar
-                </button>
-                <button onClick={this.incrementAsync}>
-                    Incrementa despues de un segundos
-                </button>  */}
-            </p>
+                <div>
+                <button onClick={() => {this.props.increment()}}>+ {/* Incremeta */}</button>
+                <button onClick={() => {this.props.decrement()}}>-  {/* Decrementa */}</button>
+                <button onClick={() => {this.props.par()}}>par</button>
+                <button onClick={() => {setTimeout(()=>this.props.delay(),1000)}}>delay</button> 
+                <button onClick={() => {this.props.double()}}>+2 </button>
+                <button onClick={() => {this.props.ndouble()}}>-2 </button> 
+                <button onClick={() => {this.props.x()}}>*2</button> 
+                </div>
+            </div>
         );
     }
 }
@@ -51,4 +39,4 @@ const mapStateToProps = (state) => {
 // Sin esto, este componente es sólo un componente tonto de React.
 //Pasamos todas las funciones que dependen de Redux, junto con el propio componente,
 // para que Redux se dé a conocer a este componente.
-export default connect(mapStateToProps, { increment, decrement })(Counter);
+export default connect(mapStateToProps, { increment, decrement, par, delay,double,ndouble,x})(Counter);
